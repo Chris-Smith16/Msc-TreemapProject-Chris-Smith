@@ -1,0 +1,426 @@
+{
+  "name": "Disk Usage",
+  "children": [
+    {
+      "name": "Applications",
+      "children": [
+        {
+          "name": "Health",
+          "children": [
+            {
+              "name": "Nike+",
+              "size": 13938,
+              "Type": ".apk"
+            },
+            {
+              "name": "Calorie Counter",
+              "size": 13812,
+              "Type": ".apk"
+            },
+            {
+              "name": "Lifesum",
+              "size": 6714,
+              "Type": ".apk"
+            },
+            {
+              "name": "Google Fit",
+              "size": 3743,
+              "Type": ".apk"
+            }
+          ]
+        },
+        {
+          "name": "News",
+          "children": [
+            {
+              "name": "BuzzFeed",
+              "size": 3534,
+              "Type": ".apk"
+            },
+            {
+              "name": "SmartNews",
+              "size": 5731,
+              "Type": ".apk"
+            },
+            {
+              "name": "Reddit",
+              "size": 7840,
+              "Type": ".apk"
+            }
+          ]
+        },
+        {
+          "name": "Sports",
+          "children": [
+            {
+              "name": "ESPN",
+              "size": 7074,
+              "Type": ".apk"
+            }
+          ]
+        },
+        {
+          "name": "Shopping",
+          "children": [
+            {
+              "name": "Amazon",
+              "size": 17010,
+              "Type": ".apk"
+            },
+            {
+              "name": "Lidel",
+              "size": 5842,
+              "Type": ".apk"
+            }
+          ]
+        },
+
+        {
+          "name": "Beauty",
+          "children": [
+            {
+              "name": "Beauty Camera",
+              "size": 8983,
+              "Type": ".apk"
+            }
+          ]
+        },
+
+        {
+          "name": "Social",
+          "children": [
+            {
+              "name": "Facebook Groups",
+              "size": 19830,
+              "Type": ".exe"
+            },
+
+            {
+              "name": "Snapchat",
+              "size": 12230,
+              "Type": ".exe"
+            },
+
+            {
+              "name": "Tumblr",
+              "size": 98300,
+              "Type": ".apk"
+            },
+
+            {
+              "name": "LinkedIn",
+              "size": 78583,
+              "Type": ".apk"
+            },
+
+            {
+              "name": "Pintrest",
+              "size": 83020,
+              "Type": ".apk"
+            }
+          ]
+        },
+
+
+        {
+          "name": "Maps & Navigation",
+          "children": [
+            {
+              "name": "Uber",
+              "size": 10230,
+              "Type": ".exe"
+            },
+
+            {
+              "name": "National Rail Enquires",
+              "size": 12230,
+              "Type": ".exe"
+            }
+
+          ]
+        },
+
+         {
+          "name": "Lifestyle",
+          "children": [
+            {
+              "name": "Gumtree",
+              "size": 10230,
+              "Type": ".exe"
+            },
+
+            {
+              "name": "Mirror",
+              "size": 14530,
+              "Type": ".apk"
+            }
+
+              ]
+        }
+
+      ]
+    },
+
+
+    {
+      "name": "Audio",
+      "children": [
+        {
+          "name": "Rock",
+          "children": [
+            {
+              "name": "Anthem1",
+              "size": 3938,
+              "Type": ".Mp4"
+            },
+            {
+              "name": "Anthem2",
+              "size": 3812,
+              "Type": ".mp4"
+            },
+            {
+              "name": "Anthem3",
+              "size": 6714,
+              "Type": ".mp3"
+            },
+            {
+              "name": "Anthem4",
+              "size": 743,
+              "Type": ".mp3"
+            }
+          ]
+        },
+        {
+          "name": "Pop",
+          "children": [
+            {
+              "name": "Pop1",
+              "size": 3534,
+              "Type": ".mp4"
+            },
+            {
+              "name": "Pop2",
+              "size": 5731,
+              "Type": ".mp3"
+            },
+            {
+              "name": "pop3",
+              "size": 7840,
+              "Type": ".mp3"
+            }
+          ]
+        },
+        {
+          "name": "Jazz",
+          "children": [
+            {
+              "name": "Jazz1",
+              "size": 2074,
+              "Type": ".mp4"
+            }
+          ]
+        },
+        {
+          "name": "Country",
+          "children": [
+            {
+              "name": "Country1",
+              "size": 7010,
+              "Type": ".wav"
+            },
+            {
+              "name": "Country2",
+              "size": 5842,
+              "Type": ".mp3"
+            }
+          ]
+        },
+
+        {
+          "name": "Podcasts",
+          "children": [
+            {
+              "name": "Spamcast",
+              "size": 9830,
+              "Type": ".wav"
+            },
+
+            {
+              "name": "Sportscast",
+              "size": 9230,
+              "Type": ".mp4"
+            },
+
+            {
+              "name": "Beautycast",
+              "size": 8300,
+              "Type": ".mp3"
+            },
+
+            {
+              "name": "Linkcast",
+              "size": 78583,
+              "Type": ".mp4"
+            },
+
+            {
+              "name": "Pincast",
+              "size": 70201,
+              "Type": ".mp3"
+            }
+          ]
+        },
+
+
+        {
+          "name": "Recordings",
+          "children": [
+            {
+              "name": "Recording1",
+              "size": 230,
+              "Type": ".mp3"
+            },
+
+            {
+              "name": "Recording2",
+              "size": 2230,
+              "Type": ".mp3"
+            }
+
+          ]
+        },
+
+        {
+          "name": " wav Downloads",
+          "children": [
+            {
+              "name": "Download1",
+              "size": 10270,
+              "Type": ".wav"
+            },
+
+            {
+              "name": "Download2",
+              "size": 14530,
+              "Type": ".wav"
+            }
+
+          ]
+        }
+
+      ]
+    },
+
+     {
+      "name": "Video",
+      "children": [
+        {
+          "name": "HD",
+          "children": [
+            {
+              "name": "VidDownload1",
+              "size": 12938,
+              "Type": ".3GPP"
+            },
+            {
+              "name": "12/11/14",
+              "size": 32812,
+              "Type": ".3GPP"
+            },
+            {
+              "name": "14/07/12",
+              "size": 23125,
+              "Type": ".3GPP"
+            },
+
+            {
+              "name": "11/07/12",
+              "size": 23125,
+              "Type": ".3GPP"
+            },
+
+            {
+              "name": "VidDownload2",
+              "size": 14345,
+              "Type": ".m4v"
+            }
+          ]
+        },
+        {
+          "name": "SD",
+          "children": [
+            {
+              "name": "13/03/13",
+              "size": 3534,
+              "Type": ".m4v"
+            },
+            {
+              "name": "02/04/12",
+              "size": 5731,
+              "Type": ".3GPP"
+            },
+            {
+              "name": "03/10/12",
+              "size": 7840,
+              "Type": ".m4v"
+            }
+          ]
+        } 
+      ]
+    },
+
+    {
+      "name": "Free Space",
+      "children": [
+        {
+          "name": "Free",
+          "size": 353400,
+          "Type": ""
+        }
+
+      ]
+    },
+
+    {
+      "name": "Games",
+      "children": [
+        {
+          "name": "Pokemon Go",
+          "size": 53400,
+          "Type": ".apk"
+        },
+
+        {
+          "name": "GTA 3",
+          "size": 63501,
+          "Type": ".apk"
+        },
+
+        {
+          "name": "Candy Crush",
+          "size": 23400,
+          "Type": ".apk"
+        },
+
+        {
+          "name": "Angry Birds",
+          "size": 73400,
+          "Type": ".exe"
+        },
+
+        {
+          "name": "Flappy Bird",
+          "size": 13400,
+          "Type": ".apk"
+        }
+
+
+
+
+      ]
+    }
+
+  ]
+}
+
+     
