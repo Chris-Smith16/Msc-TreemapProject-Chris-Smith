@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 
@@ -50,20 +50,132 @@
 <body>
     <div id="body"></div>
 
+
+
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
 
         //variables
-        var chartWidth = 360;
-        var chartHeight = 550;
+        var chartWidth = 411;
+        var chartHeight = 500;
         var xscale = d3.scale.linear().range([0, chartWidth]);
         var yscale = d3.scale.linear().range([0, chartHeight]);
         var color = d3.scale.category10();
         var headerHeight = 22;
-        var headerColor = "#555555";
+        var headerColor = d3.color.name;
         var transitionDuration = 500;
         var root;
         var node;
+        
+
+        //create legend elements
+        body = d3.select('body')
+        svg = body.append('svg').attr('height', 100).attr('width', 400)
+        text = svg.append('text').text("Legend")
+                       .attr('x', 15)
+                       .attr('y', 30)
+                       .attr('fill', 'black')
+
+
+
+        rect = svg.append('rect')
+                        .attr('width', 45)
+                        .attr('height', 30)
+                        .attr('x', 130)
+                        .attr('y', 50)
+                        .style('fill', "rgb(214,39,40)")
+                        .attr('stroke', 'black')
+        text = svg.append('text').text(".mp3")
+                       .attr('x', 135)
+                       .attr('y', 70)
+                       .attr('fill', 'white')
+
+        rect2 = svg.append('rect')
+                      .attr('width', 45)
+                      .attr('height', 30)
+                      .attr('x', 70)
+                      .attr('y', 10)
+                      .style('fill', "rgb(23,190,207)")
+                      .attr('stroke', 'black')
+        text2 = svg.append('text').text(".apk")
+                       .attr('x', 75)
+                       .attr('y', 30)
+                       .attr('fill', 'white')
+
+        rect3 = svg.append('rect')
+                     .attr('width', 45)
+                     .attr('height', 30)
+                     .attr('x', 130)
+                     .attr('y', 10)
+                     .style('fill', "rgb(31,119,180)")
+                     .attr('stroke', 'black')
+        text3 = svg.append('text').text(".exe")
+                       .attr('x', 135)
+                       .attr('y', 30)
+                       .attr('fill', 'white')
+
+        rect4 = svg.append('rect')
+                    .attr('width', 45)
+                    .attr('height', 30)
+                    .attr('x', 190)
+                    .attr('y', 10)
+                    .style('fill', "rgb(148,103,189)")
+                    .attr('stroke', 'black')
+        text4 = svg.append('text').text(".wav")
+                       .attr('x', 195)
+                       .attr('y', 30)
+                       .attr('fill', 'white')
+
+        rect5 = svg.append('rect')
+            .attr('width', 45)
+            .attr('height', 30)
+            .attr('x', 250)
+            .attr('y', 10)
+            .style('fill', "rgb(44,160,44)")
+            .attr('stroke', 'black')
+        text5 = svg.append('text').text(".mp4")
+                       .attr('x', 255)
+                       .attr('y', 30)
+                       .attr('fill', 'white')
+
+        rect6 = svg.append('rect')
+          .attr('width', 45)
+          .attr('height', 30)
+          .attr('x', 310)
+          .attr('y', 10)
+          .style('fill', "rgb(140,86,75)")
+          .attr('stroke', 'black')
+        text6 = svg.append('text').text(".3gp")
+                       .attr('x', 315)
+                       .attr('y', 30)
+                       .attr('fill', 'white')
+
+  
+        rect7 = svg.append('rect')
+          .attr('width', 45)
+          .attr('height', 30)
+          .attr('x', 10)
+          .attr('y', 50)
+          .style('fill', "rgb(227,119,194)")
+          .attr('stroke', 'black')
+        text7 = svg.append('text').text(".m4v")
+                       .attr('x', 15)
+                       .attr('y', 70)
+                       .attr('fill', 'white')
+
+        rect8 = svg.append('rect')
+        .attr('width', 45)
+        .attr('height', 30)
+        .attr('x', 70)
+        .attr('y', 50)
+        .style('fill', "rgb(255,127,14)")
+        .attr('stroke', 'black')
+        text7 = svg.append('text').text(".wma")
+                       .attr('x', 75)
+                       .attr('y', 70)
+                       .attr('fill', 'white')
+
+
 
         //initialise d3 treemap
         var treemap = d3.layout.treemap()
@@ -105,6 +217,7 @@
             var parentEnterTransition = parentCells.enter()
                 .append("g")
                 .attr("class", "cell parent")
+                //changed so that zooms out888
                  .on("click", function (d) {
                      zoom(node === d.parent ? root : d.parent);
                  })
@@ -169,12 +282,10 @@
                 .append("g")
                 .attr("class", "cell child")
 
-                //display file type and size on click
+                //**************display file type and size on click***********altered****************
                 .on("click", function (d) {
                     zoom(node === d.children ? root : d.parent);
-                    alert("File name: " + d.name + "     " +
-                "File size: " + d.size + "Kb" );
-                })
+                    alert("File name: " + d.name + "     " + "File size: " + d.size + "Kb");})
                 .append("svg")
                 .attr("class", "clip");
             childEnterTransition.append("rect")
@@ -245,10 +356,20 @@
             return d.size;
         }
 
+        function isEven(value){
+    if (value%2 == 0)
+        return true;
+    else
+        return false;
+        }
+
+
         function zoom(d) {
             this.treemap
                 .padding([headerHeight / (chartHeight / d.dy), 0, 0, 0])
                 .nodes(d);
+
+
 
             // moving the next two lines above treemap layout messes up padding of zoom result
             var kx = chartWidth / d.dx;
@@ -314,7 +435,7 @@
                     return d.children ? headerHeight : Math.max(0.01, (ky * d.dy));
                 })
 
-                //change cell colour
+                //change cell colour**********altered
                 .style("fill", function (d) {
                     return d.children ? headerColor : color(d.Type);
                 });
