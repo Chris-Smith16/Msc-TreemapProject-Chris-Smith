@@ -9,22 +9,22 @@
           "children": [
             {
               "name": "Nike+",
-              "size": 13938,
+              "size": 139,
               "Type": ".apk"
             },
             {
               "name": "Calorie Counter",
-              "size": 13812,
+              "size": 156,
               "Type": ".apk"
             },
             {
               "name": "Lifesum",
-              "size": 6714,
+              "size": 450,
               "Type": ".apk"
             },
             {
               "name": "Google Fit",
-              "size": 3743,
+              "size": 743,
               "Type": ".apk"
             }
           ]
@@ -34,17 +34,17 @@
           "children": [
             {
               "name": "BuzzFeed",
-              "size": 3534,
+              "size": 534,
               "Type": ".apk"
             },
             {
               "name": "SmartNews",
-              "size": 5731,
+              "size": 731,
               "Type": ".apk"
             },
             {
               "name": "Reddit",
-              "size": 7840,
+              "size": 840,
               "Type": ".apk"
             }
           ]
@@ -54,7 +54,7 @@
           "children": [
             {
               "name": "ESPN",
-              "size": 7074,
+              "size": 174,
               "Type": ".apk"
             }
           ]
@@ -64,12 +64,12 @@
           "children": [
             {
               "name": "Amazon",
-              "size": 17010,
+              "size": 510,
               "Type": ".apk"
             },
             {
               "name": "Lidel",
-              "size": 5842,
+              "size": 842,
               "Type": ".apk"
             }
           ]
@@ -80,7 +80,7 @@
           "children": [
             {
               "name": "Beauty Camera",
-              "size": 8983,
+              "size": 983,
               "Type": ".apk"
             }
           ]
@@ -91,31 +91,31 @@
           "children": [
             {
               "name": "Facebook Groups",
-              "size": 19830,
+              "size": 830,
               "Type": ".exe"
             },
 
             {
               "name": "Snapchat",
-              "size": 12230,
+              "size": 230,
               "Type": ".exe"
             },
 
             {
               "name": "Tumblr",
-              "size": 98300,
+              "size": 300,
               "Type": ".apk"
             },
 
             {
               "name": "LinkedIn",
-              "size": 78583,
+              "size": 583,
               "Type": ".apk"
             },
 
             {
               "name": "Pintrest",
-              "size": 83020,
+              "size": 520,
               "Type": ".apk"
             }
           ]
@@ -127,13 +127,13 @@
           "children": [
             {
               "name": "Uber",
-              "size": 10230,
+              "size": 230,
               "Type": ".exe"
             },
 
             {
               "name": "National Rail Enquires",
-              "size": 12230,
+              "size": 530,
               "Type": ".exe"
             }
 
@@ -145,13 +145,13 @@
           "children": [
             {
               "name": "Gumtree",
-              "size": 10230,
+              "size": 630,
               "Type": ".exe"
             },
 
             {
               "name": "Mirror",
-              "size": 14530,
+              "size":  530,
               "Type": ".apk"
             }
 
@@ -170,22 +170,22 @@
           "children": [
             {
               "name": "Anthem1",
-              "size": 3938,
+              "size":  38,
               "Type": ".wma"
             },
             {
               "name": "Anthem2",
-              "size": 3812,
+              "size":  12,
               "Type": ".mp4"
             },
             {
               "name": "Anthem3",
-              "size": 6714,
+              "size":  14,
               "Type": ".mp3"
             },
             {
               "name": "Anthem4",
-              "size": 743,
+              "size":  43,
               "Type": ".mp3"
             }
           ]
@@ -195,17 +195,17 @@
           "children": [
             {
               "name": "Pop1",
-              "size": 3534,
+              "size":  34,
               "Type": ".mp4"
             },
             {
               "name": "Pop2",
-              "size": 5731,
+              "size":  31,
               "Type": ".mp3"
             },
             {
               "name": "pop3",
-              "size": 7840,
+              "size":  40,
               "Type": ".mp3"
             }
           ]
@@ -215,7 +215,7 @@
           "children": [
             {
               "name": "Jazz1",
-              "size": 2074,
+              "size":  74,
               "Type": ".mp4"
             }
           ]
@@ -225,12 +225,12 @@
           "children": [
             {
               "name": "Country1",
-              "size": 7010,
+              "size":  10,
               "Type": ".wav"
             },
             {
               "name": "Country2",
-              "size": 5842,
+              "size":  42,
               "Type": ".mp3"
             }
           ]
@@ -241,31 +241,31 @@
           "children": [
             {
               "name": "Spamcast",
-              "size": 9830,
+              "size":  830,
               "Type": ".wav"
             },
 
             {
               "name": "Sportscast",
-              "size": 9230,
+              "size":  230,
               "Type": ".mp4"
             },
 
             {
               "name": "Beautycast",
-              "size": 8300,
+              "size":  300,
               "Type": ".mp3"
             },
 
             {
               "name": "Linkcast",
-              "size": 78583,
+              "size":  583,
               "Type": ".mp4"
             },
 
             {
               "name": "Pincast",
-              "size": 70201,
+              "size":  201,
               "Type": ".mp3"
             }
           ]
@@ -277,13 +277,13 @@
           "children": [
             {
               "name": "Recording1",
-              "size": 230,
+              "size":  30,
               "Type": ".mp3"
             },
 
             {
               "name": "Recording2",
-              "size": 2230,
+              "size":  38,
               "Type": ".mp3"
             }
 
@@ -295,13 +295,13 @@
           "children": [
             {
               "name": "Download1",
-              "size": 10270,
+              "size":  70,
               "Type": ".wav"
             },
 
             {
               "name": "Download2",
-              "size": 14530,
+              "size":  32,
               "Type": ".wav"
             }
 
@@ -319,29 +319,29 @@
           "children": [
             {
               "name": "VidDownload1",
-              "size": 12938,
+              "size":   938,
               "Type": ".3GPP"
             },
             {
               "name": "12/11/14",
-              "size": 32812,
+              "size":  1812,
               "Type": ".3GPP"
             },
             {
               "name": "14/07/12",
-              "size": 23125,
+              "size":  1125,
               "Type": ".3GPP"
             },
 
             {
               "name": "11/07/12",
-              "size": 23125,
+              "size":  2125,
               "Type": ".3GPP"
             },
 
             {
               "name": "VidDownload2",
-              "size": 14345,
+              "size":  345,
               "Type": ".m4v"
             }
           ]
@@ -351,17 +351,17 @@
           "children": [
             {
               "name": "13/03/13",
-              "size": 3534,
+              "size":  534,
               "Type": ".m4v"
             },
             {
               "name": "02/04/12",
-              "size": 5731,
+              "size":  731,
               "Type": ".3GPP"
             },
             {
               "name": "03/10/12",
-              "size": 7840,
+              "size":  840,
               "Type": ".m4v"
             }
           ]
@@ -374,7 +374,7 @@
       "children": [
         {
           "name": "Free",
-          "size": 353400,
+          "size":  8400,
           "Type": ""
         }
 
@@ -386,31 +386,31 @@
       "children": [
         {
           "name": "Pokemon Go",
-          "size": 53400,
+          "size": 1400,
           "Type": ".apk"
         },
 
         {
           "name": "GTA 3",
-          "size": 63501,
+          "size": 1501,
           "Type": ".apk"
         },
 
         {
           "name": "Candy Crush",
-          "size": 23400,
+          "size": 900,
           "Type": ".apk"
         },
 
         {
           "name": "Angry Birds",
-          "size": 73400,
+          "size": 1400,
           "Type": ".exe"
         },
 
         {
           "name": "Flappy Bird",
-          "size": 13400,
+          "size": 400,
           "Type": ".apk"
         }
 

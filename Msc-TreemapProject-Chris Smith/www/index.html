@@ -217,10 +217,11 @@
             var parentEnterTransition = parentCells.enter()
                 .append("g")
                 .attr("class", "cell parent")
-                //changed so that zooms out888
-                 .on("click", function (d) {
-                     zoom(node === d.parent ? root : d.parent);
-                 })
+                
+                 //changed so that zooms out
+                  .on("click", function (d) {
+                      zoom(node === d ? d.parent : d);
+                  })
                 .append("svg")
                 .attr("class", "clip")
                 .attr("width", function (d) {
@@ -282,10 +283,15 @@
                 .append("g")
                 .attr("class", "cell child")
 
-                //**************display file type and size on click***********altered****************
-                .on("click", function (d) {
-                    zoom(node === d.children ? root : d.parent);
-                    alert("File name: " + d.name + "     " + "File size: " + d.size + "Kb");})
+             
+                //**************display file type and size on click***********
+                 .on("click", function (d) {
+                     if (node === d.parent)
+                         alert("File name: " + d.name + "     " + "File size: " + d.size + "Mb");
+                     else
+                         zoom(d.parent);
+                 })
+
                 .append("svg")
                 .attr("class", "clip");
             childEnterTransition.append("rect")
@@ -355,14 +361,6 @@
         function size(d) {
             return d.size;
         }
-
-        function isEven(value){
-    if (value%2 == 0)
-        return true;
-    else
-        return false;
-        }
-
 
         function zoom(d) {
             this.treemap
@@ -435,7 +433,7 @@
                     return d.children ? headerHeight : Math.max(0.01, (ky * d.dy));
                 })
 
-                //change cell colour**********altered
+                //change cell colour**********
                 .style("fill", function (d) {
                     return d.children ? headerColor : color(d.Type);
                 });
