@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-
     <meta charset="utf-8">
+
+    <!-- Layout settings, rect, chart, labels and cell modified and Taken from http://bl.ocks.org/billdwhite/4325239** -->
     <style>
+         
         body {
             margin: 0;
             font-family: 'Times New Roman', Times, serif;
@@ -48,16 +50,19 @@
 
 </head>
 <body>
+
+    <!-- div on which Treemap is drawn, and legend elements append from -->
     <div id="body"></div>
 
-
-
+    <!-- Implement D3 library -->
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
 
-        //variables
-        var chartWidth = 411;
+        //variables for width and height
+        var chartWidth = 400;
         var chartHeight = 500;
+
+        //variables **Taken from http://bl.ocks.org/billdwhite/4325239**
         var xscale = d3.scale.linear().range([0, chartWidth]);
         var yscale = d3.scale.linear().range([0, chartHeight]);
         var color = d3.scale.category10();
@@ -68,7 +73,7 @@
         var node;
         
 
-        //create legend elements
+        //create legend elements - own work
         body = d3.select('body')
         svg = body.append('svg').attr('height', 100).attr('width', 400)
         text = svg.append('text').text("Legend")
@@ -77,7 +82,7 @@
                        .attr('fill', 'black')
 
 
-
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect = svg.append('rect')
                         .attr('width', 45)
                         .attr('height', 30)
@@ -85,11 +90,13 @@
                         .attr('y', 50)
                         .style('fill', "rgb(214,39,40)")
                         .attr('stroke', 'black')
+        //place file type name within the svg element
         text = svg.append('text').text(".mp3")
                        .attr('x', 135)
                        .attr('y', 70)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect2 = svg.append('rect')
                       .attr('width', 45)
                       .attr('height', 30)
@@ -97,11 +104,13 @@
                       .attr('y', 10)
                       .style('fill', "rgb(23,190,207)")
                       .attr('stroke', 'black')
+        //place file type name within the svg element
         text2 = svg.append('text').text(".apk")
                        .attr('x', 75)
                        .attr('y', 30)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect3 = svg.append('rect')
                      .attr('width', 45)
                      .attr('height', 30)
@@ -109,11 +118,14 @@
                      .attr('y', 10)
                      .style('fill', "rgb(31,119,180)")
                      .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text3 = svg.append('text').text(".exe")
                        .attr('x', 135)
                        .attr('y', 30)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect4 = svg.append('rect')
                     .attr('width', 45)
                     .attr('height', 30)
@@ -121,11 +133,14 @@
                     .attr('y', 10)
                     .style('fill', "rgb(148,103,189)")
                     .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text4 = svg.append('text').text(".wav")
                        .attr('x', 195)
                        .attr('y', 30)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect5 = svg.append('rect')
             .attr('width', 45)
             .attr('height', 30)
@@ -133,11 +148,14 @@
             .attr('y', 10)
             .style('fill', "rgb(44,160,44)")
             .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text5 = svg.append('text').text(".mp4")
                        .attr('x', 255)
                        .attr('y', 30)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect6 = svg.append('rect')
           .attr('width', 45)
           .attr('height', 30)
@@ -145,12 +163,14 @@
           .attr('y', 10)
           .style('fill', "rgb(140,86,75)")
           .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text6 = svg.append('text').text(".3gp")
                        .attr('x', 315)
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-  
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect7 = svg.append('rect')
           .attr('width', 45)
           .attr('height', 30)
@@ -158,11 +178,14 @@
           .attr('y', 50)
           .style('fill', "rgb(227,119,194)")
           .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text7 = svg.append('text').text(".m4v")
                        .attr('x', 15)
                        .attr('y', 70)
                        .attr('fill', 'white')
 
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
         rect8 = svg.append('rect')
         .attr('width', 45)
         .attr('height', 30)
@@ -170,6 +193,8 @@
         .attr('y', 50)
         .style('fill', "rgb(255,127,14)")
         .attr('stroke', 'black')
+
+        //place file type name within the svg element
         text7 = svg.append('text').text(".wma")
                        .attr('x', 75)
                        .attr('y', 70)
@@ -177,7 +202,7 @@
 
 
 
-        //initialise d3 treemap
+        //initialise d3 treemap **Taken from http://bl.ocks.org/billdwhite/4325239**
         var treemap = d3.layout.treemap()
             .round(false)
             .size([chartWidth, chartHeight])
@@ -186,14 +211,14 @@
                 return d.size;
             });
 
-        //draw the shape on which the treemap will be placed on
+        //draw the shape on which the treemap will be placed on - **Taken from http://bl.ocks.org/billdwhite/4325239**
         var chart = d3.select("#body")
             .append("svg:svg")
             .attr("width", chartWidth)
             .attr("height", chartHeight)
             .append("svg:g");
 
-        //read in the json file
+        //read in the json file ** modified to read in File System emulation data** - **Taken from http://bl.ocks.org/billdwhite/4325239**
         d3.json("mockData.json", function (data) {
             node = root = data;
             var nodes = treemap.nodes(root);
@@ -206,19 +231,18 @@
             });
 
 
-
-            // create parent cells
+            // create parent cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var parentCells = chart.selectAll("g.cell.parent")
                 .data(parents, function (d) {
                     return "p-" + d.name;
                 });
 
-            //transtion parent cells
+            //transtion parent cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var parentEnterTransition = parentCells.enter()
                 .append("g")
                 .attr("class", "cell parent")
                 
-                 //changed so that zooms out
+                 // Modified changed so that zooms out
                   .on("click", function (d) {
                       zoom(node === d ? d.parent : d);
                   })
@@ -246,7 +270,7 @@
                 });
 
 
-            // update transition
+            // update transition **Taken from http://bl.ocks.org/billdwhite/4325239**
             var parentUpdateTransition = parentCells.transition().duration(transitionDuration);
             parentUpdateTransition.select(".cell")
                 .attr("transform", function (d) {
@@ -268,23 +292,23 @@
                     return d.name;
                 });
 
-            // remove transition
+            // remove transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
             parentCells.exit()
                 .remove();
 
-            // create children cells
+            // create children cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var childrenCells = chart.selectAll("g.cell.child")
                 .data(children, function (d) {
                     return "c-" + d.name;
                 });
 
-            // enter transition
+            // enter transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var childEnterTransition = childrenCells.enter()
                 .append("g")
                 .attr("class", "cell child")
 
              
-                //**************display file type and size on click***********
+                //display file type and size on click ** own work
                  .on("click", function (d) {
                      if (node === d.parent)
                          alert("File name: " + d.name + "     " + "File size: " + d.size + "Mb");
@@ -292,6 +316,7 @@
                          zoom(d.parent);
                  })
 
+                // enter transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
                 .append("svg")
                 .attr("class", "clip");
             childEnterTransition.append("rect")
@@ -315,7 +340,7 @@
                 });
 
 
-            // update child transition
+            // update child transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var childUpdateTransition = childrenCells.transition().duration(transitionDuration);
             childUpdateTransition.select(".cell")
                 .attr("transform", function (d) {
@@ -344,7 +369,8 @@
                 .text(function (d) {
                     return d.name;
                 });
-            // exit transition
+
+            // exit transition **Taken from http://bl.ocks.org/billdwhite/4325239**
             childrenCells.exit()
                 .remove();
             d3.select("select").on("change", function () {
@@ -357,11 +383,12 @@
             zoom(node);
         });
 
-
+        //return size value - **Taken from http://bl.ocks.org/billdwhite/4325239**
         function size(d) {
             return d.size;
         }
 
+        //logic controlling zoom function - **Taken from http://bl.ocks.org/billdwhite/4325239**
         function zoom(d) {
             this.treemap
                 .padding([headerHeight / (chartHeight / d.dy), 0, 0, 0])
@@ -369,7 +396,7 @@
 
 
 
-            // moving the next two lines above treemap layout messes up padding of zoom result
+            // moving the next two lines above treemap layout disrupts padding of zoom result - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var kx = chartWidth / d.dx;
             var ky = chartHeight / d.dy;
             var level = d;
@@ -382,7 +409,7 @@
                     .style("display", "none");
             }
 
-            //handles the transtion logic during the zoom
+            //handles the transtion logic during the zoom - **Taken from http://bl.ocks.org/billdwhite/4325239**
             var zoomTransition = chart.selectAll("g.cell").transition().duration(transitionDuration)
                 .attr("transform", function (d) {
                     return "translate(" + xscale(d.x) + "," + yscale(d.y) + ")";
@@ -433,7 +460,7 @@
                     return d.children ? headerHeight : Math.max(0.01, (ky * d.dy));
                 })
 
-                //change cell colour**********
+                //change cell colour -  modified so that colour of nodes is 
                 .style("fill", function (d) {
                     return d.children ? headerColor : color(d.Type);
                 });
