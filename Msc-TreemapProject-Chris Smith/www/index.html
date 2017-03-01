@@ -62,7 +62,7 @@
         var chartWidth = 400;
         var chartHeight = 500;
 
-        //variables **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //variables 
         var xscale = d3.scale.linear().range([0, chartWidth]);
         var yscale = d3.scale.linear().range([0, chartHeight]);
         var color = d3.scale.category10();
@@ -73,7 +73,7 @@
         var node;
         
 
-        //create legend elements - own work
+        //create legend elements 
         body = d3.select('body')
         svg = body.append('svg').attr('height', 100).attr('width', 400)
         text = svg.append('text').text("Legend")
@@ -82,7 +82,7 @@
                        .attr('fill', 'black')
 
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect = svg.append('rect')
                         .attr('width', 45)
                         .attr('height', 30)
@@ -96,7 +96,7 @@
                        .attr('y', 70)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect2 = svg.append('rect')
                       .attr('width', 45)
                       .attr('height', 30)
@@ -110,7 +110,7 @@
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect3 = svg.append('rect')
                      .attr('width', 45)
                      .attr('height', 30)
@@ -125,7 +125,7 @@
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect4 = svg.append('rect')
                     .attr('width', 45)
                     .attr('height', 30)
@@ -140,7 +140,7 @@
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect5 = svg.append('rect')
             .attr('width', 45)
             .attr('height', 30)
@@ -155,7 +155,7 @@
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect6 = svg.append('rect')
           .attr('width', 45)
           .attr('height', 30)
@@ -170,7 +170,7 @@
                        .attr('y', 30)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect7 = svg.append('rect')
           .attr('width', 45)
           .attr('height', 30)
@@ -185,7 +185,7 @@
                        .attr('y', 70)
                        .attr('fill', 'white')
 
-        //create legend elements, place element at x and y coordinate and fill with relevant node colour  - own work
+        //create legend elements, place element at x and y coordinate and fill with relevant node colour  
         rect8 = svg.append('rect')
         .attr('width', 45)
         .attr('height', 30)
@@ -202,7 +202,7 @@
 
 
 
-        //initialise d3 treemap **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //initialise d3 treemap 
         var treemap = d3.layout.treemap()
             .round(false)
             .size([chartWidth, chartHeight])
@@ -211,14 +211,14 @@
                 return d.size;
             });
 
-        //draw the shape on which the treemap will be placed on - **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //draw the shape on which the treemap will be placed on 
         var chart = d3.select("#body")
             .append("svg:svg")
             .attr("width", chartWidth)
             .attr("height", chartHeight)
             .append("svg:g");
 
-        //read in the json file ** modified to read in File System emulation data** - **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //read in the json file 
         d3.json("mockData.json", function (data) {
             node = root = data;
             var nodes = treemap.nodes(root);
@@ -231,13 +231,13 @@
             });
 
 
-            // create parent cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // create parent cells 
             var parentCells = chart.selectAll("g.cell.parent")
                 .data(parents, function (d) {
                     return "p-" + d.name;
                 });
 
-            //transtion parent cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            //transtion parent cells 
             var parentEnterTransition = parentCells.enter()
                 .append("g")
                 .attr("class", "cell parent")
@@ -270,7 +270,7 @@
                 });
 
 
-            // update transition **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // update transition 
             var parentUpdateTransition = parentCells.transition().duration(transitionDuration);
             parentUpdateTransition.select(".cell")
                 .attr("transform", function (d) {
@@ -292,23 +292,23 @@
                     return d.name;
                 });
 
-            // remove transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // remove transition 
             parentCells.exit()
                 .remove();
 
-            // create children cells - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // create children cells 
             var childrenCells = chart.selectAll("g.cell.child")
                 .data(children, function (d) {
                     return "c-" + d.name;
                 });
 
-            // enter transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // enter transition 
             var childEnterTransition = childrenCells.enter()
                 .append("g")
                 .attr("class", "cell child")
 
              
-                //display file type and size on click ** own work
+                //display file type and size on click 
                  .on("click", function (d) {
                      if (node === d.parent)
                          alert("File name: " + d.name + "     " + "File size: " + d.size + "Mb");
@@ -316,7 +316,7 @@
                          zoom(d.parent);
                  })
 
-                // enter transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
+                // enter transition 
                 .append("svg")
                 .attr("class", "clip");
             childEnterTransition.append("rect")
@@ -340,7 +340,7 @@
                 });
 
 
-            // update child transition - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // update child transition 
             var childUpdateTransition = childrenCells.transition().duration(transitionDuration);
             childUpdateTransition.select(".cell")
                 .attr("transform", function (d) {
@@ -370,7 +370,7 @@
                     return d.name;
                 });
 
-            // exit transition **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // exit transition 
             childrenCells.exit()
                 .remove();
             d3.select("select").on("change", function () {
@@ -383,12 +383,12 @@
             zoom(node);
         });
 
-        //return size value - **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //return size value 
         function size(d) {
             return d.size;
         }
 
-        //logic controlling zoom function - **Taken from http://bl.ocks.org/billdwhite/4325239**
+        //logic controlling zoom function 
         function zoom(d) {
             this.treemap
                 .padding([headerHeight / (chartHeight / d.dy), 0, 0, 0])
@@ -396,7 +396,7 @@
 
 
 
-            // moving the next two lines above treemap layout disrupts padding of zoom result - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            // moving the next two lines above treemap layout disrupts padding of zoom result 
             var kx = chartWidth / d.dx;
             var ky = chartHeight / d.dy;
             var level = d;
@@ -409,7 +409,7 @@
                     .style("display", "none");
             }
 
-            //handles the transtion logic during the zoom - **Taken from http://bl.ocks.org/billdwhite/4325239**
+            //handles the transtion logic during the zoom 
             var zoomTransition = chart.selectAll("g.cell").transition().duration(transitionDuration)
                 .attr("transform", function (d) {
                     return "translate(" + xscale(d.x) + "," + yscale(d.y) + ")";
@@ -460,7 +460,7 @@
                     return d.children ? headerHeight : Math.max(0.01, (ky * d.dy));
                 })
 
-                //change cell colour -  modified so that colour of nodes is 
+                //change cell colour 
                 .style("fill", function (d) {
                     return d.children ? headerColor : color(d.Type);
                 });
